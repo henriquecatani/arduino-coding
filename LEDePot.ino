@@ -40,8 +40,15 @@ void loop()
     analogWrite(b, 255 * 3 - n);
     analogWrite(r, n);
     analogWrite(g, 0);
-	Serial.println(n);
+    Serial.println(n);
     Serial.println("g");
 
   }
+while ((256*3 < n) && (n <256 * 4)){
+    n = analogRead(A1);
+    analogWrite(r, 255 - n);
+    analogWrite(g, n);
+    analogWrite(b, 0);
+    Serial.println(n);
+    Serial.println("r2");
   }
